@@ -11,7 +11,7 @@
 
 - Vite + React(JS) 기본 세팅
 - `src/data/dummy_data.js`
-- `src/App.jsx` — "velog 만들기" 문구만 있는 빈 진입 화면
+- `src/App.jsx` — 초기 진입 화면
 
 **구현 범위**
 
@@ -35,7 +35,7 @@
 
 ### 데이터 조건
 - [ ] `src/data/dummy_data.js`의 배열을 `map`으로 순회해서 카드 목록을 렌더링한다
-- [ ] 각 게시글 데이터는 하위 컴포넌트에 **props로 전달**한다 (`<PostCard post={post} />` 형태)
+- [ ] 각 게시글 데이터는 하위 컴포넌트에 **props로 전달**한다 (ex. `<PostCard post={post} />` 형태)
 - [ ] 상세 페이지도 동일한 더미데이터에서 `id`가 일치하는 게시글을 찾아 props로 내려서 렌더링한다
 
 ## 시작하기
