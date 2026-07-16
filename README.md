@@ -13,7 +13,7 @@
 - `src/data/dummy_data.js`
 - `src/App.jsx` — 초기 진입 화면
 
-**구현 범위**
+**과제 범위 (TODO)**
 
 - `react-router-dom` 설치 및 라우터 세팅
 - 레이아웃/헤더 등 공통 UI
