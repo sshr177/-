@@ -14,7 +14,7 @@ const NavbarWapper = styled.div`
 
 const NavTabs = styled.div`
     display: flex;
-    display: row;
+    flex-direction: row;
 `
 
 const Tags = styled.a`
