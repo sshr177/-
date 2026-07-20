@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 
 const CardSection = styled.div`
     width: 320px;
@@ -8,6 +9,17 @@ const CardSection = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .04);
+    transition: box-shadow .25s ease-in, transform .25s ease-in;
+    &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
 `
 const Postimg = styled.img`
     width: 320px;
@@ -87,15 +99,17 @@ const PostCard = ({ post }) => {
     return (
         <CardSection>
             <Postimg src={thumbnail} />
-            <PostContentWapper>
-                <PostContent>
-                    <Posttitle>{ title }</Posttitle>
-                    <PostSummary>{ summary }</PostSummary>
-                </PostContent>
-                <PostDate>
-                    <span>{ date } · { comments }개의 댓글</span>
-                </PostDate>
-            </PostContentWapper>
+            <Link to={`/DetailPage/${post.id}`}>
+                <PostContentWapper>
+                    <PostContent>
+                        <Posttitle>{ title }</Posttitle>
+                        <PostSummary>{ summary }</PostSummary>
+                    </PostContent>
+                    <PostDate>
+                        <span>{ date } · { comments }개의 댓글</span>
+                    </PostDate>
+                </PostContentWapper>
+            </Link>
             <Postfooter>
                 <PostAuthorWapper>
                     <Authorimg src={ thumbnail }/>

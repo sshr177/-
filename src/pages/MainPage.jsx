@@ -1,24 +1,23 @@
 import styled from "styled-components"
-import Header from "../components/Header"
-import Navbar from "../components/navbar"
 import PostCard from "../components/PostCard"
 import dummyData from "../data/dummy_data";
+import Navbar from "../components/navbar";
 
 const CardGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    padding-top: 30px;
 `
 
 
 function MainPage () {
     return (
         <>
-            <Header></Header>
             <Navbar></Navbar>
             <CardGrid>
                 {dummyData.map((post) => (
-                    <PostCard key={post.id} post={post}/>
+                        <PostCard key={post.id} post={post}/>
                 ))}
             </CardGrid>
             
