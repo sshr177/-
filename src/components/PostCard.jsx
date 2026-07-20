@@ -12,14 +12,16 @@ const CardSection = styled.div`
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .04);
     transition: box-shadow .25s ease-in, transform .25s ease-in;
     &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
 
     a {
         color: black;
         text-decoration: none;
     }
+
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", 나눔고딕, "Nanum Gothic", "Noto Sans KR", "Noto Sans CJK KR", arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
 `
 const Postimg = styled.img`
     width: 320px;
@@ -39,11 +41,13 @@ const Posttitle = styled.h4`
     margin: 0;
     margin-bottom: 4px;
     overflow: hidden;
+    color: #212529;
 `
 const PostSummary = styled.p`
     height: 63px;
     margin: 0;
     margin-bottom: 24px;
+    color: #495057;
 `
 const PostDate = styled.div`
     color: #868E96;
@@ -61,7 +65,7 @@ const PostAuthorWapper = styled.div`
     
     b{
         font-size: 12px;
-        color: black;
+        color: #212529;
         padding-left: 2px;
     }
 `
@@ -69,6 +73,7 @@ const Authorimg = styled.img`
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    border-radius: 50px;
 `
 
 const Postfooter = styled.div`

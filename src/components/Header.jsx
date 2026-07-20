@@ -45,6 +45,7 @@ const BlogLogo = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    color: #212529;
 
     a {
         display: flex;
@@ -55,11 +56,12 @@ const BlogIcon = styled.img`
     display: block;
     width: 28px;
     height: 28px;
-    border-radius: 10px;
+    border-radius: 4px;
 `
 const BlogName = styled.span`
     font-size: 21px;
     font-weight: 600;
+    font-family: "Fira Mono", monospace;
 `
 const Header = ({ post }) => {
     return(
@@ -71,7 +73,7 @@ const Header = ({ post }) => {
                     <Link to={`/`}>
                         <BlogIcon src={ Vlogo } alt='velog logo'></BlogIcon>
                     </Link>
-                    <BlogName>{post.author.name}. log</BlogName>
+                    <BlogName>{post.author.name}.log</BlogName>
                 </BlogLogo>
             ) : (
                     <HeaderLogo src={ logo } alt="velog logo"/>

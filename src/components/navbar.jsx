@@ -17,6 +17,10 @@ const NavbarWapper = styled.div`
 const NavTabs = styled.div`
     display: flex;
     flex-direction: row;
+
+    &:first-child{
+        color: #212529;
+    }
 `
 
 const Tags = styled.a`
@@ -29,7 +33,17 @@ const Tags = styled.a`
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    color: #868e96;
+
+    &:first-child {
+        padding: 5px;
+        border-bottom: 2px solid #212529;
+    }
+    span {
+        color : #212529;
+    }
 `
+
 const NavActcion = styled.div`
     display: flex;
     flex-direction: row;
@@ -41,18 +55,20 @@ const DropDown = styled.div`
 `
 const DropDownButton = styled.button`
     width: 100px;
-    height: 48px;
-    padding: 0 12px;
-    font-weight: 700;
+    height: 32px;
+    padding: 0 8px;
+    font-weight: 600;
+    color: #495057;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .05);
     cursor: pointer;
 `
 const DropDownMenu = styled.div`
@@ -102,10 +118,10 @@ const Navbar = () => {
     return (
         <NavbarWapper>
             <NavTabs>
-                <Tags><FontAwesomeIcon icon={ faArrowTrendUp } style={{color: "rgb(0, 0, 0)",}} />트렌딩</Tags>
-                <Tags style={{color: "gray",}}><FontAwesomeIcon icon={ faStar } style={{color: "gray",}} />추천</Tags>
-                <Tags style={{color: "gray",}}><FontAwesomeIcon icon={ faClock } style={{color: "gray",}} />최신</Tags>
-                <Tags style={{color: "gray",}}><FontAwesomeIcon icon={ faRss } style={{color: "gray",}} />피드</Tags>
+                <Tags><span><FontAwesomeIcon icon={ faArrowTrendUp } style={{color: "#212529;",}} /></span><span>트렌딩</span></Tags>
+                <Tags style={{color: "#868e96;",}}><FontAwesomeIcon icon={ faStar } style={{color: "#868e96;",}} />추천</Tags>
+                <Tags style={{color: "#868e96;",}}><FontAwesomeIcon icon={ faClock } style={{color: "#868e96;",}} />최신</Tags>
+                <Tags style={{color: "#868e96;",}}><FontAwesomeIcon icon={ faRss } style={{color: "#868e96;",}} />피드</Tags>
             </NavTabs>
             <NavActcion>
                 <DropDown>
